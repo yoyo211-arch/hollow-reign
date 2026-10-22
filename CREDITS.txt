@@ -1,0 +1,23 @@
+Hollow Reign - asset credits
+============================
+
+All third-party assets below are released under CC0 1.0 (public domain).
+Credit is not required, but given gladly.
+
+Sprites (characters, monsters, weapons, floor/wall tiles, UI hearts)
+  "16x16 DungeonTileset II" v1.7 by 0x72 (Robert Norenberg)
+  https://0x72.itch.io/dungeontileset-ii                 -> assets/dungeon/
+
+Visual effects (fire, smoke, slashes, sparks, magic, muzzle flashes, scorch marks)
+  "Particle Pack" by Kenney (www.kenney.nl)
+  https://kenney.nl/assets/particle-pack                 -> assets/fx/ (downscaled to 128px)
+
+Font
+  "Kenney Fonts" (Kenney Pixel) by Kenney
+  https://kenney.nl/assets/kenney-fonts                  -> assets/fonts/
+
+Sound effects
+  "RPG Audio", "Impact Sounds", "Interface Sounds" by Kenney
+  https://kenney.nl/assets                               -> assets/sfx/
+
+Magic, boss and music sounds are synthesized in scripts/sfx.gd.
