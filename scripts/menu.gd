@@ -270,7 +270,8 @@ func _build_main(parent: Control) -> void:
 	_button(v, "Armory", func(): _go("armory"))
 	_button(v, "Wardrobe", func(): _go("wardrobe"))
 	_button(v, "Settings", func(): _go("settings"))
-	_button(v, "Quit", func(): get_tree().quit())
+	if not OS.has_feature("web"):
+		_button(v, "Quit", func(): get_tree().quit())
 	_spacer(v, 120)
 	v.add_child(_label("WASD move  |  Mouse aim & fire  |  Space dash  |  1-5, Q/E, wheel switch weapon  |  Esc pause  |  F11 fullscreen", 20, Color(0.7, 0.65, 0.62)))
 
