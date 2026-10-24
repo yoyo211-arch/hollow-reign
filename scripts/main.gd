@@ -20,6 +20,11 @@ func _ready() -> void:
 			GameState.debug_top = true
 		elif a.begins_with("--shot="):
 			get_tree().create_timer(float(a.get_slice("=", 1))).timeout.connect(_screenshot)
+		elif a.begins_with("--burst="):
+			# --burst=START,COUNT,STEP saves COUNT numbered screenshots, then quits.
+			var p := a.get_slice("=", 1).split(",")
+			for i in int(p[1]):
+				get_tree().create_timer(float(p[0]) + i * float(p[2])).timeout.connect(_burst_shot.bind(i, i == int(p[1]) - 1))
 	for a in args:
 		if a.begins_with("--level="):
 			start_level(int(a.get_slice("=", 1)))
@@ -40,6 +45,13 @@ func _screenshot() -> void:
 	img.save_png(path)
 	print("Saved screenshot: ", ProjectSettings.globalize_path(path))
 	get_tree().quit()
+
+
+func _burst_shot(i: int, last: bool) -> void:
+	get_viewport().get_texture().get_image().save_png("user://burst_%02d.png" % i)
+	if last:
+		print("Burst done")
+		get_tree().quit()
 
 
 func _swap(n: Node) -> void:
