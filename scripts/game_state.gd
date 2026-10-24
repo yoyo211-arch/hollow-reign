@@ -106,6 +106,11 @@ func apply_settings() -> void:
 	AudioServer.set_bus_volume_db(0, linear_to_db(maxf(float(settings["volume"]), 0.001)))
 	if DisplayServer.get_name() == "headless":
 		return
+	if OS.has_feature("web"):
+		# Browsers control vsync and only allow fullscreen after a click.
+		if settings["fullscreen"] != (DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN):
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if settings["fullscreen"] else DisplayServer.WINDOW_MODE_WINDOWED)
+		return
 	if settings["fullscreen"]:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:

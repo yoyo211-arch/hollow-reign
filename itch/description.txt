@@ -1,0 +1,28 @@
+Descend through five cursed gates and break the reign of the Hollow King.
+
+Hollow Reign is a dark top-down pixel-art roguelite. Survive the hordes of each gate, reach the portal before the dead overwhelm you, and face a three-phase demon lord at the bottom of the dungeon.
+
+FEATURES
+- 5 gates + a boss fight, each with its own mood and enemies
+- Skeletons, imps, necromancers, ogres, exploding slimes and the Hollow King himself
+- 5 weapons to forge: Throwing Knives, Hellfire Staff, Bone Bow, Executioner's Axe, Wraith Staff
+- A skill tree with 3 branches (Blood, Wrath, Shade)
+- 13 hero skins in the Wardrobe
+- Souls are kept when you die - every run makes you stronger
+- Runs smoothly on low-end PCs
+
+CONTROLS
+WASD / Arrows - move
+Mouse - aim, hold left click to attack
+Space / Shift - dash (brief invulnerability)
+1-5, Q / E, mouse wheel - switch weapon
+Esc / P - pause
+F11 - fullscreen
+
+Tip: click the game once so sound can start (browser rule).
+
+CREDITS
+Made with Godot 4.3.
+Art: 16x16 DungeonTileset II by 0x72 (CC0).
+Effects, font and sounds: Kenney (CC0) - www.kenney.nl
+Source code: https://github.com/yoyo211-arch/hollow-reign
